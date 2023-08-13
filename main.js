@@ -1,0 +1,1 @@
+console.log("testing if webpack setup is working");

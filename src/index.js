@@ -1,1 +1,3 @@
-console.log("testing if webpack setup is working");
+import { createTopSection } from "./homepage.js";
+
+createTopSection();

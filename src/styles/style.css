@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@400;700&display=swap');
 
 * {
     margin: 0;
@@ -10,13 +10,19 @@
 body {
     font-size: 16px;
     font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
 }
 
 main {
     min-height: 100vh;
 }
 
-h1,h2,h3,h4,h5,h6{
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     font-family: 'Montserrat', sans-serif;
 }
 
@@ -24,7 +30,7 @@ h1,h2,h3,h4,h5,h6{
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 30rem;
+    gap: 40rem;
     background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../assets/pics/heroBread.jpeg');
     background-repeat: no-repeat;
     background-size: cover;
@@ -49,6 +55,7 @@ h1,h2,h3,h4,h5,h6{
 
 #hero-div h1 {
     font-size: 50px;
+    line-height: 1.25;
 }
 
 #hero-div p {
@@ -58,4 +65,27 @@ h1,h2,h3,h4,h5,h6{
 
 #spacer {
     padding: 50px;
+}
+
+#hero-btn {
+    font-weight: 700;
+    display: inline-block;
+    padding: 15px 40px;
+    color: white;
+    background-color: transparent;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    border-width: 2px;
+    border-color: #fff;
+    border-style: solid;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+#hero-btn:hover {
+    background-color: #fff;
+    color: #000;
+    transition: .25s ease-in-out;
 }

@@ -89,3 +89,39 @@ h6 {
     color: #000;
     transition: .25s ease-in-out;
 }
+
+#feature-section {
+    display: flex;
+    justify-content: space-evenly;
+    padding-top: 6rem;
+    padding-bottom: 10rem;
+}
+
+#feature-head {
+    text-align: center;
+    font-size: 40px;
+    padding-top: 4rem;
+}
+
+.benefit {
+    width: 350px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 1rem;
+}
+
+.benefit img {
+    width: 100px;
+    height: auto;
+}
+
+.benefit h3 {
+    width: 75%;
+    line-height: 1.5;
+}
+
+.benefit p {
+    line-height: 1.75;
+}

@@ -45,24 +45,51 @@ export function createHomePage() {
     const featSection = document.createElement('section');
     featSection.id = 'feature-section';
 
-    //store array of images
-    const imagesBenefitsArr = [
-        "../src/assets/icons/best-price.png",
-        "../src/assets/icons/bread-baked.png",
-        "../src/assets/icons/eco-friendly-icon.png"
+    const featureHead = document.createElement('h2');
+    featureHead.textContent = "Discover the Organic Goodness of Bread Paradise";
+    featureHead.id = 'feature-head';
+
+    //an array of objects 
+    const divData = [
+        {
+            icon: "../src/assets/icons/best-price.png",
+            heading: "Great Value With Competitive Prices",
+            subheading: "With the most competitive prices on the market we are able to deliver great value without compromising on taste."
+        },
+
+        {
+            icon: "../src/assets/icons/bread-baked.png",
+            heading: "Handcrafted Breads Made With Love And Care",
+            subheading: "Our skilled bakers carefully handcraft each loaf of bread, ensuring a unique and flavourful experience for our customers."
+        },
+        
+        {
+            icon: "../src/assets/icons/eco-friendly-icon.png",
+            heading: "Embrace Sustainable Bread Choices",
+            subheading: "We prioritize sustainability by sourcing local ingredients, minimizing waste, and supporting eco-friendly packaging solutions."
+        }
     ]
 
     //loop to create div items for 3 features
-    for (let i = 0; i < 3; i++){
+    for (const data of divData) {
         const divItem = document.createElement('div');
 
         divItem.classList.add('benefit');
 
         //image icons
         const imgIcons = document.createElement("img");
-        imgIcons.src = imagesBenefitsArr[i];
+        imgIcons.src = data.icon;
+
+
+        const heading = document.createElement('h3');
+        heading.textContent = data.heading;
+
+        const subheading = document.createElement('p');
+        subheading.textContent = data.subheading;
 
         divItem.appendChild(imgIcons);
+        divItem.appendChild(heading);
+        divItem.appendChild(subheading);
 
         featSection.appendChild(divItem);
     }
@@ -82,5 +109,6 @@ export function createHomePage() {
     heroDiv.appendChild(menuBtn);
 
     //feature section
+    main.appendChild(featureHead);
     main.appendChild(featSection);
 }

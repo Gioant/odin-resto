@@ -1,18 +1,11 @@
 
-/*
-TO DO:
-- optimize creating elements by using DRY principles and creating a function that takes string as parameter
-- do the same for setting id of an element
-*/
 
 export function createHomePage() {
     const body = document.querySelector('body');
 
     //create main html element
     const main = document.createElement('main');
-
-    //create nav for tabbed menu items
-    const nav = document.createElement('nav');
+    main.id = "homepage"
 
     //create hero section
     const heroSect = document.createElement('section');
@@ -62,7 +55,7 @@ export function createHomePage() {
             heading: "Handcrafted Breads Made With Love And Care",
             subheading: "Our skilled bakers carefully handcraft each loaf of bread, ensuring a unique and flavourful experience for our customers."
         },
-        
+
         {
             icon: "../src/assets/icons/eco-friendly-icon.png",
             heading: "Embrace Sustainable Bread Choices",
@@ -94,10 +87,16 @@ export function createHomePage() {
         featSection.appendChild(divItem);
     }
 
+    const footerDiv = document.createElement('footer');
+
+    const footerParagraph = document.createElement('p');
+    footerParagraph.textContent = "Copyright © 2023 Anthony Giolti Funes";
+
+    footerDiv.appendChild(footerParagraph);
+
     //appending elements
     body.appendChild(main);
 
-    main.appendChild(nav);
     main.appendChild(heroSect);
 
     //hero section
@@ -111,4 +110,6 @@ export function createHomePage() {
     //feature section
     main.appendChild(featureHead);
     main.appendChild(featSection);
+
+    main.appendChild(footerDiv);
 }

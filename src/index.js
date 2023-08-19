@@ -1,3 +1,5 @@
-import { createTopSection } from "./homepage.js";
+import { createPageLinks } from './pages.js';
+import { createHomePage } from "./homepage.js";
 
-createTopSection();
+createPageLinks();
+createHomePage();

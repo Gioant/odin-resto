@@ -1,10 +1,8 @@
 
 
 export function createHomePage() {
-    const body = document.querySelector('body');
-
-    //create main html element
-    const main = document.createElement('main');
+    // Create a DocumentFragment to hold the elements
+    const fragment = document.createDocumentFragment();
 
     //create hero section
     const heroSect = document.createElement('section');
@@ -32,6 +30,13 @@ export function createHomePage() {
     menuBtn.href = "#";
     menuBtn.textContent = "View Menu";
 
+    heroDiv.appendChild(logoImg);
+    heroDiv.appendChild(title);
+    heroDiv.appendChild(subHead);
+    heroDiv.appendChild(menuBtn);
+
+    heroSect.appendChild(heroDiv);
+    heroSect.appendChild(spacer);
 
     //creating feature section
     const featSection = document.createElement('section');
@@ -86,29 +91,10 @@ export function createHomePage() {
         featSection.appendChild(divItem);
     }
 
-    const footerDiv = document.createElement('footer');
+    // Append sections to the fragment
+    fragment.appendChild(heroSect);
+    fragment.appendChild(featureHead);
+    fragment.appendChild(featSection);
 
-    const footerParagraph = document.createElement('p');
-    footerParagraph.textContent = "Copyright © 2023 Anthony Giolti Funes";
-
-    footerDiv.appendChild(footerParagraph);
-
-    //appending elements
-    body.appendChild(main);
-
-    main.appendChild(heroSect);
-
-    //hero section
-    heroSect.appendChild(heroDiv);
-    heroSect.appendChild(spacer);
-    heroDiv.appendChild(logoImg);
-    heroDiv.appendChild(title);
-    heroDiv.appendChild(subHead);
-    heroDiv.appendChild(menuBtn);
-
-    //feature section
-    main.appendChild(featureHead);
-    main.appendChild(featSection);
-
-    main.appendChild(footerDiv);
+    return fragment;
 }

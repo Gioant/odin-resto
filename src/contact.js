@@ -1,13 +1,15 @@
 
 export function createContactPage() {
-    const body = document.querySelector('body');
-
-    //create main html element
-    const main = document.createElement('main');
+    // Create a DocumentFragment to hold the elements
+    const fragment = document.createDocumentFragment();
 
 
     const contactSection = document.createElement('section');
     contactSection.id = "contact-section";
+
+    const div1 = document.createElement('div');
+    div1.id = "top";
+
 
     //create form
     const form = document.createElement('form');
@@ -32,18 +34,17 @@ export function createContactPage() {
     const submitButton = document.createElement("button");
     submitButton.textContent = "Submit";
 
+    form.appendChild(emailLabel);
+    form.appendChild(emailInput);
+    form.appendChild(nameLabel);
+    form.appendChild(nameInput);
+    form.appendChild(submitButton);
 
-    const footerDiv = document.createElement('footer');
+    div1.appendChild(form);
+    contactSection.appendChild(div1);
 
-    const footerParagraph = document.createElement('p');
-    footerParagraph.textContent = "Copyright © 2023 Anthony Giolti Funes";
+    // Append contact section to the fragment
+    fragment.appendChild(contactSection);
 
-    footerDiv.appendChild(footerParagraph);
-
-    //appending elements
-    body.appendChild(main);
-
-
-
-    main.appendChild(footerDiv);
+    return fragment;
 }

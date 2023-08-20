@@ -5,7 +5,6 @@ export function createHomePage() {
 
     //create main html element
     const main = document.createElement('main');
-    main.id = "homepage"
 
     //create hero section
     const heroSect = document.createElement('section');

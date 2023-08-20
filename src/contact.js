@@ -1,10 +1,9 @@
 
-export function createContact() {
+export function createContactPage() {
     const body = document.querySelector('body');
 
     //create main html element
     const main = document.createElement('main');
-    main.id = "menu";
 
 
     const contactSection = document.createElement('section');
@@ -43,7 +42,6 @@ export function createContact() {
 
     //appending elements
     body.appendChild(main);
-
 
 
 

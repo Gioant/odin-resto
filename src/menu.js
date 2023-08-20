@@ -1,13 +1,12 @@
 
-export function createMenu() {
+export function createMenuPage() {
     const body = document.querySelector('body');
 
     //create main html element
     const main = document.createElement('main');
-    main.id = "menu";
 
 
-    
+
     const footerDiv = document.createElement('footer');
 
     const footerParagraph = document.createElement('p');

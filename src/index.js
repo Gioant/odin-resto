@@ -6,8 +6,6 @@ import { createMenuPage } from "./menu.js";
 //create tabbed menu
 createPageLinks();
 
-// //create initial page and display homepage content
-// createHomePage();
 
 // Create main element and append it to the body
 const mainContent = document.createElement('main');
@@ -39,9 +37,9 @@ contactTab.addEventListener('click', () => {
     updateMainContent(createContactPage());
 });
 
-// menuTab.addEventListener('click', () => {
-//     updateMainContent(createMenuPageContent());
-// });
+menuTab.addEventListener('click', () => {
+    updateMainContent(createMenuPage());
+});
 
 
 // menuTab.addEventListener('click', () => {

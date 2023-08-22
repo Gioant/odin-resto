@@ -16,7 +16,7 @@ export function createHomePage() {
     spacer.id = 'spacer';
 
     const logoImg = document.createElement('img');
-    logoImg.src = "../src/assets/pics/logo.png";
+    logoImg.src = "../dist/assets/pics/logo.png";
 
     const title = document.createElement('h1');
     title.textContent = "Welcome To Bread Paradise, Where Deliciousness awaits!";
@@ -49,19 +49,19 @@ export function createHomePage() {
     //an array of objects 
     const divData = [
         {
-            icon: "../src/assets/icons/best-price.png",
+            icon: "./assets/icons/best-price.png",
             heading: "Great Value With Competitive Prices",
             subheading: "With the most competitive prices on the market we are able to deliver great value without compromising on taste."
         },
 
         {
-            icon: "../src/assets/icons/bread-baked.png",
+            icon: "./assets/icons/bread-baked.png",
             heading: "Handcrafted Breads Made With Love And Care",
             subheading: "Our skilled bakers carefully handcraft each loaf of bread, ensuring a unique and flavourful experience for our customers."
         },
 
         {
-            icon: "../src/assets/icons/eco-friendly-icon.png",
+            icon: "./assets/icons/eco-friendly-icon.png",
             heading: "Embrace Sustainable Bread Choices",
             subheading: "We prioritize sustainability by sourcing local ingredients, minimizing waste, and supporting eco-friendly packaging solutions."
         }

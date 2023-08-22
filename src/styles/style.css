@@ -141,13 +141,11 @@ nav {
     top: 0;
     left: 0;
     width: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.9);
     padding: 0 10px 10px 10px;
     display: flex;
     justify-content: center;
     gap: 4rem;
-    /* transform: perspective(500px) rotateX(15deg);
-    z-index: 1; */
 }
 
 nav button {
@@ -169,4 +167,71 @@ nav button:hover {
     background-color: #fff;
     color: #000;
     transition: .25s ease-in-out;
+}
+
+
+
+#contact-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('../assets/pics/contactBread.jpeg');
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+}
+
+#top {
+    padding-left: 21%;
+    width: 55%;
+}
+
+#top>h2 {
+    font-weight: 400;
+    font-size: 50px;
+    text-align: center;
+}
+
+#top>form {
+    padding-top: 5%;
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    grid-template-rows: repeat(2, auto);
+    gap: .25rem;
+}
+
+#top>form>label {
+    grid-row: 1;
+}
+
+#top>form>input {
+    padding: 10px 12px;
+    border: 1px solid #b3b3b3;
+    border-radius: 50px;
+    font-size: inherit;
+}
+
+#email {
+    margin-right: 8%;
+}
+
+
+#top>form>button {
+    margin-top: 5%;
+    padding: 10px 12px;
+    grid-column: span 2;
+    border-radius: 50px;
+    border: 1px solid #b3b3b3;
+    background-color: #000;
+    color: #fff;
+    font-size: 18px;
+    text-transform: uppercase;
+    font-weight: 400;
+    letter-spacing: 2px;
+    font-family: 'Open Sans', sans-serif;
+}
+
+#top>form button:hover {
+    background-color: #4d4d4d;
 }

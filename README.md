@@ -1,4 +1,4 @@
-![Preview](./src/assets/pics/preview.png)
+![Preview](./dist/assets/pics/preview.png)
 
 # Restaurant Homepage Project
 
